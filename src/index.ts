@@ -1,4 +1,4 @@
-const age = 18;
+const age: number = 18;
 console.log("Age:", age); // Expected: Age: 18
 
 interface User {
@@ -23,7 +23,7 @@ console.log("Sum:", add(5, 7)); // Expected: Sum: 12
 type Profile = { username?: string };
 
 function getUserName(p: Profile): string {
-    return p.username ?? "Guest";
+    return p.username?.toUpperCase() ?? "Guest";
 }
 
 console.log(getUserName({ username: "Bob" })); // Expected: Bob
